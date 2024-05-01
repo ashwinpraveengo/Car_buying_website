@@ -42,6 +42,7 @@
 #head h1{
     font-size: 4.5ch;
     padding-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .search{
     margin-left: 5vw;
@@ -59,8 +60,8 @@
         padding-left: 5px;
     }
     button{
-        height: 5.2vh;
-        width: 55px;
+        height: 68%;
+        width: 9%;
         margin-top: 5px;
     }
     button:hover{
@@ -69,8 +70,8 @@
     }
 }
 .logo{
-    width: 30vw;
-    height: 7vh;
+    width: 30%;
+    height: 7%;
     padding-top: 10px;
     display: flex;
     justify-content: end;
@@ -238,7 +239,7 @@
         width: 100vw;
         justify-content: center;
         align-items: center;
-        padding-left: 29vw;
+        padding-left: 25%;
     }
     .logo{
         justify-content: center;
@@ -252,7 +253,7 @@
         width: 40px;
     }
     .search input{
-        width: 50vw;
+        width: 50%;
         height: 3vh;
         font-size: 90%;
     }
