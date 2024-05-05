@@ -7,54 +7,93 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script>
     function userLogin(event) {
-    event.preventDefault();
-    var userEmail = document.getElementById("user-email").value;
-    var userPassword = document.getElementById("user-password").value;
-    var userInfo = {
+      event.preventDefault();
+      var userEmail = document.getElementById("user-email").value;
+      var userPassword = document.getElementById("user-password").value;
+      var userInfo = {
         email: userEmail,
         password: userPassword
-    };
-    localStorage.setItem('user', JSON.stringify(userInfo));
-}
-function adminLogin(event) {
-    event.preventDefault();
-    var adminEmail = document.getElementById("admin-email").value;
-    var adminPassword = document.getElementById("admin-password").value;
-    var adminInfo = {
+      };
+      showAlert("Login successful");
+      localStorage.setItem('user', JSON.stringify(userInfo));
+    }
+    
+    function adminLogin(event) {
+      event.preventDefault();
+      var adminEmail = document.getElementById("admin-email").value;
+      var adminPassword = document.getElementById("admin-password").value;
+      var adminInfo = {
         email: adminEmail,
         password: adminPassword
-    };
-    localStorage.setItem('admin', JSON.stringify(adminInfo));
-}
+      };
+      showAlert("Login successful as Admin");
+      localStorage.setItem('admin', JSON.stringify(adminInfo));
+    }
+    
+    function registerNewUser(event) {
+      event.preventDefault();
+      var userEmail = document.getElementById("register-email").value;
+      var userPassword = document.getElementById("register-password").value;
+      var userInfo = {
+        email: userEmail,
+        password: userPassword
+      };
+      showAlert("Registration successful");
+      localStorage.setItem('user', JSON.stringify(userInfo));
+    }
+
+    function showAlert(message) {
+      var alertDiv = document.createElement('div');
+      alertDiv.className = 'alert';
+      alertDiv.appendChild(document.createTextNode(message));
+      var containerDiv = document.querySelector('.container');
+      containerDiv.insertBefore(alertDiv, containerDiv.firstChild);
+      setTimeout(function() {
+        alertDiv.style.display = 'none';
+      }, 10000); 
+    }
   </script>
 </head>
 <body>
   <div class="container">
-    <form class="login-form" onsubmit="return validateUser()">
+    <form class="login-form" onsubmit="return userLogin()">
       <h2>Login to Carz</h2>
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+        <label for="user-email">Email</label>
+        <input type="text" id="user-email" name="user-email" required>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <label for="user-password">Password</label>
+        <input type="password" id="user-password" name="user-password" required>
       </div>
       <button type="submit">Login as User</button>
     </form>
     <br>
-    <form class="login-form" onsubmit="return validateAdmin()">
+    <form class="login-form" onsubmit="return adminLogin()">
       <h2>Admin Login</h2>
       <div class="form-group">
-        <label for="adminUsername">Admin Username</label>
-        <input type="text" id="adminUsername" name="adminUsername" required>
+        <label for="admin-email">Admin Email</label>
+        <input type="text" id="admin-email" name="admin-email" required>
       </div>
       <div class="form-group">
-        <label for="adminPassword">Admin Password</label>
-        <input type="password" id="adminPassword" name="adminPassword" required>
+        <label for="admin-password">Admin Password</label>
+        <input type="password" id="admin-password" name="admin-password" required>
       </div>
       <button type="submit">Login as Admin</button>
     </form>
+    <br>
+    <form class="register-form" onsubmit="return registerNewUser()">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" name="register-email" required>
+      </div>
+      <div class="form-group">
+        <label for="register-password">Password</label>
+        <input type="password" id="register-password" name="register-password" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>    
   </div>
 </body>
 </html>
