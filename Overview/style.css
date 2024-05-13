@@ -1,0 +1,500 @@
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; 
+}
+
+
+#container {
+    margin: 0 70px 0 40px; 
+
+    padding: 10px;
+}
+
+
+
+.AppBar li{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: oblique;
+}
+
+.AppBar nav ul li a:active,
+    .AppBar nav ul li a:hover {
+        color: red;
+}
+
+
+.nav-item {
+    display: flex;
+    justify-content: center; /* Center the contents horizontally */
+    align-items: center; /* Center the contents vertically */
+}
+
+
+#Dealer {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #15577e; /* Blue background color */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-item a i {
+    margin-right: 5px; 
+}
+#Heading {
+    display: flex;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#Heading h3 {
+    margin: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#Overview{
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+    margin-left: 50px;
+}
+
+
+
+.AppBar {
+    padding: 20px; 
+    font-size: 30px; 
+    width: 100vw; 
+    box-sizing: border-box; 
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 2vw;
+}
+
+
+
+.AppBar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.AppBar nav ul li {
+    display: inline-block;
+    padding: 10px 80px; 
+}
+
+.AppBar nav ul li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-weight: medium; 
+}
+
+.AppBar nav ul li a:hover {
+    color: red;
+}
+
+.AppBar nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    border-bottom: 2px solid red;
+}
+
+.AppBar nav ul li.active a {
+    color: red; 
+    font-weight: medium; /
+}
+
+
+.AppBar nav ul li {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #ccc;
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: relative;
+}
+
+.AppBar nav ul li a:active {
+    color: red;
+}
+
+.AppBar nav ul li a:hover {
+    color: red;
+}
+
+
+
+.AppBar nav ul li:last-child {
+    border-right: none;
+}
+
+
+
+
+.AppBar nav ul li a:active,
+.AppBar nav ul li a:hover {
+    color: red;
+}
+
+.AppBar nav ul li a:active::after,
+.AppBar nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 100%;
+    border-bottom: 2px solid red; 
+}
+
+
+
+.Car-Image img{
+    width: 60%;
+}
+
+#carouselExampleIndicators{
+    width: 60%;
+}
+
+
+
+.carousel-inner img{
+    width: 60%;
+}
+
+.button-box {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.light-text {
+    color: #888;
+}
+
+.dark-text {
+    color: #333;
+}
+
+.Right-Overview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select-variant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.select-variant .dark-text {
+    margin-right: auto;
+}
+
+.select-variant i {
+    font-size: 24px;
+    color: black;
+}
+.calculate-emi {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.calculate-emi span {
+    flex: 1;
+}
+
+.calculate-emi i {
+    color: white;
+}
+
+.Summary {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Summary span {
+    flex: 1;
+}
+
+.Summary i {
+    color: white;
+}
+
+
+.Variant button-box{
+    display: block;
+}
+
+
+.Summary{
+    background-color: #15577e;
+}
+
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin-top: 6%;
+    
+}
+
+.section-heading {
+    font-weight: bold;
+    padding-top: 18px;
+    margin-bottom: 20px;
+    display: inline-block; /* Display as inline block to wrap content */
+    border-top: 5px #FF0000 solid;
+    position: relative; /* Relative positioning for pseudo-element */
+}
+
+.section {
+    padding: 50px; /* Add padding around the section */
+}
+
+/* Style for the section heading */
+.section-heading {
+    font-size: 28px; /* Increase font size of the section heading */
+    margin-bottom: 20px; /* Add spacing below the section heading */
+}
+
+/* Style for the table */
+.table {
+    width: 100%; /* Make the table width 100% of its container */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 20px; /* Add top margin to the table */
+}
+
+/* Style for table rows */
+.table tbody tr {
+    border-bottom: 1px solid #ddd; /* Add bottom border to table rows */
+}
+
+/* Style for table cells (td) */
+.table tbody td {
+    padding: 12px; /* Add padding to table cells */
+    font-size: 16px; /* Set font size of table cell content */
+}
+
+.feature-category {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative; /* Ensure relative positioning for absolute positioning of arrow */
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between; /* Space between text and arrow */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    font-size: 24px;
+    border-top: 3.5px solid #dddada;
+    padding: 28px 9px;
+    cursor: pointer;
+}
+
+.down-arrow {
+    /* Position arrow icon */
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Adjust this value as needed */
+    transform: translateY(-50%);
+}
+
+.category-content {
+    display: none;
+    padding-top: 10px;
+}
+
+.category-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-content table td {
+    padding: 8px;
+    border: none;
+}
+
+
+.loan-calculator {
+    font-family: "Roboto", sans-serif;
+    width: 600px;
+    margin: 24px auto;
+    background: #fff;
+    box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #14213d;
+    overflow: hidden;
+  }
+  
+  .loan-calculator,
+  .loan-calculator * {
+    box-sizing: border-box;
+  }
+  
+  .loan-calculator .top {
+    background: #15577e;
+    color: #fff;
+    padding: 32px;
+  }
+  
+  .loan-calculator .top h2 {
+    margin-top: 0;
+  }
+  
+  .loan-calculator form {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  
+  .loan-calculator .title {
+    margin-bottom: 16px;
+  }
+  
+  .loan-calculator form input {
+    font-size: 20px;
+    padding: 8px 24px;
+    width: 100%;
+  }
+  
+  .loan-calculator .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .loan-calculator .result .left {
+    width: 100%;
+    padding: 8px 32px;
+  }
+  
+  .loan-calculator .left h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  
+  .loan-calculator .result .value {
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 33, 61, 0.2);
+  }
+  
+  .loan-calculator .result .value::before {
+    content: "₹";
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 6px;
+    opacity: 0.4;
+  }
+  
+  .loan-calculator .calculate-btn {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 24px 0;
+  }
+  
+  .loan-calculator .right {
+    width: 50%;
+  }
+  
+  @media (max-width: 650px) {
+    .loan-calculator {
+      width: 90%;
+      max-width: 500px;
+    }
+  
+    .loan-calculator form {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .loan-calculator .result {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
