@@ -320,14 +320,14 @@ footer{
         flex-direction: column;
       }
       .carousel-image-container {
-        width: 100vw; /* Desired width */
-        height: 128vh; /* Desired height */
-        overflow: hidden; /* Hide overflowing content */
+        width: 100vw;
+        height: 128vh;
+        overflow: hidden;
     }
     
     .carousel-image-container img {
-        width: auto; /* Make the image fill the container */
-        height: 100%; /* Maintain aspect ratio */
-        object-fit: cover; /* Crop the image to cover the container */
+        width: auto;
+        height: 100%;
+        object-fit: cover;
     }
   }
