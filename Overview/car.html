@@ -51,7 +51,7 @@
     
     <div id="container">
     <div id="Heading" >
-    <h3>718 Boxster</h3>
+    <h3 id="CarName">718 Boxster</h3>
     </div>
     <br><br>
     <div id="Overview">
@@ -252,7 +252,7 @@ function closeEmiCalculator() {
     document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const modelID = urlParams.get('model');
-
+    const carID = document.getElementById('CarName');
     if (modelID) {
       const imageSources = {
         "p911": ["https://cdn.motor1.com/images/mgl/Vzz1qK/s3/most-expensive-2023-porsche-911-gt3-rs.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO8L7KMIHWhQ58HBgfN%25tP0Dy5x1T898maikILanBCrKVzZoufLUSv6DBhY4W8zyP3a2lv1fUOAsU3cgxtMKXwDsGVSbg%25b1HzUWfbPBC7wUhatmwZFHvf", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO8L7KMIHWhQ58HBgfN%25tP0Dy5x1T898maikILanBCrKVzZoufLUSv6DBhY4W8zyP3a2lv1fUOAsU3cgxtMKXwDsGVSbg%25b1HzUWfbPBC7wUhatmwZFHvf"],
@@ -267,6 +267,27 @@ function closeEmiCalculator() {
         if (carImages.length > 0 && modelID in imageSources) {
             for (let i = 0; i < carImages.length && i < imageSources[modelID].length; i++) {
                 carImages[i].src = imageSources[modelID][i];
+            }
+            switch (modelID){
+              case "p911":
+                carID.innerHTML = "Porsche 911";
+                break;
+              case "p718":
+                carID.innerHTML = "Porsche 718 Boxster";
+                break;
+              case "Panamera":
+                carID.innerHTML = "Porsche Panamera";
+                break;
+              case "Taycan":
+                carID.innerHTML = "Porsche Taycan";
+                break;
+              case "Macan":
+                carID.innerHTML = "Porsche Macan";
+                break;
+              case "Cayenne":
+                carID.innerHTML = "Porsche Cayenne";
+                break;
+              
             }
         }
 

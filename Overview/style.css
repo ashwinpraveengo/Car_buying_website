@@ -68,12 +68,12 @@ body {
 
 .AppBar {
     padding: 20px; 
-    font-size: 44px; 
-    width: 100%; 
+    font-size: 30px; 
+    width: 100vw; 
     box-sizing: border-box; 
     font-weight: 100;
     font-style: normal;
-    margin-left: 10%;
+    margin-left: 2vw;
 }
 
 
