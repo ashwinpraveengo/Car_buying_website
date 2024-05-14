@@ -69,7 +69,10 @@ body {
     display: flex;
     flex-direction: row;
     gap: 75px;
-    margin-left: 50px;}
+    margin-left: 50px;
+}
+
+
 .AppBar {
     padding: 20px; 
     font-size: 30px; 
