@@ -80,11 +80,16 @@ body {
     box-sizing: border-box; 
     font-weight: 100;
     font-style: normal;
-    margin-left: 2vw;}
+    margin-left: 2vw;
+}
+
 .AppBar nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;}
+    margin: 0;
+}
+
+
 .AppBar nav ul li {
     display: inline-block;
     padding: 10px 80px;}
