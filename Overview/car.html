@@ -19,6 +19,7 @@
 
 </head>
 <body>
+  
   <div class="AppBar">
     <nav>
         <ul class="nav nav-pills">
@@ -42,7 +43,7 @@
             </li>
         </ul>
     </nav>
-</div>
+  </div>
 
 <div class="Menu-Bar" >
   <div class="side-bar" id="sideBar">
@@ -66,7 +67,7 @@
     
     <div id="container">
     <div id="Heading" >
-    <h3>718 Boxster</h3>
+    <h3 id="CarName">718 Boxster</h3>
     </div>
     <br><br>
     <div id="Overview">
@@ -222,24 +223,74 @@
           </div>
       </div>
   </div>
-  <div id="Colours" class="section" >
+
+
+  <div id="Colours" class="section">
     <h2 class="section-heading">Colours</h2>
-    <div class="color-box" style="width: 100%; height: 100%; position: relative; background: white">
-      <img id="color-image" style="width: 712px; height: 434px; left: 70px; top: 140px; position: absolute" src="https://via.placeholder.com/712x434" />
-      <div id="colour1"></div>
-      <div id="colour2"></div>
-      <div id="colour3" style=""></div>
-      <div id="colour4" style="width: 53px; height: 46px; left: 837px; top: 258px; position: absolute; background: black"></div>
+    <div class="color-box">
+      <img id="color-image" src="https://via.placeholder.com/712x434" alt="Colour Palette">
+      <div class="color-buttons">
+        <button id="btn_red" class="color-button red" onclick="changeColor('red')"></button>
+        <button id="btn_black" class="color-button black" onclick="changeColor('black')"></button>
+        <button id="btn_grey" class="color-button grey" onclick="changeColor('grey')"></button>
+        <button id="btn_white" class="color-button white" onclick="changeColor('white')"></button>
+      </div>
+    </div>
   </div>
-  </div>
+
+
 </div>
+
 
 
 <br>
 
-  
+</body>
 
-  <script>
+
+<script>
+      const colorimageSources = {
+        "p911": [
+            "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO3jZ60KwChQ5kpBgfNksH0DydkkT89trdikIMBtBCr61MZouWGiSv6aFLY4WoVVP3a6Rbnw1dn4qTRYL3U8lJHpletT75NijtkRHocQbciPJZ09qLk6pUZKTG2UCVPa9",
+            "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO3jZ60KZhUWTQZzmaifsZZ1BDJksqZ8pUJUSko3pAYCvMqlPo45tHnvYXX2E4oFjcL3scnw1xb4qTRYL3U8lJHpletT75NijtkRHocQbciPJZ09qLk6pUZKTG2UCVPa9",
+            "url_to_p911_grey_image.jpg",
+            "url_to_p911_white_image.jpg"
+        ],
+        "p718": [
+            "url_to_p718_red_image.jpg",
+            "url_to_p718_black_image.jpg",
+            "url_to_p718_grey_image.jpg",
+            "url_to_p718_white_image.jpg"
+        ],
+        
+    };
+
+    function changeColor(color) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const model = urlParams.get('model'); 
+        
+        if (model && colorimageSources[model]) {
+            const colorIndex = ['red', 'black', 'grey', 'white'].indexOf(color);
+            
+            if (colorIndex !== -1) {
+                const imageUrl = colorimageSources[model][colorIndex];
+                if (imageUrl) {
+                    const colorImage = document.getElementById('color-image');
+                    colorImage.src = imageUrl;
+                    
+                    const newUrlParams = new URLSearchParams(window.location.search);
+                    newUrlParams.set('model', model); 
+                    const newUrl = `${window.location.origin}${window.location.pathname}?${newUrlParams.toString()}`;
+                    window.history.replaceState({}, '', newUrl);
+                }
+            }
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const defaultColor = 'red'; 
+        changeColor(defaultColor); 
+    });
+
 function toggleCategory(categoryId) {
     var content = document.getElementById(categoryId);
     var arrow = document.getElementById(`down-arrow-${categoryId}`);
