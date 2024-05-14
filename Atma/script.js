@@ -30,7 +30,7 @@ document.getElementById('adminLoginForm').addEventListener('submit', function(ev
   var adminUsername = document.getElementById('adminUsername').value;
   var adminPassword = document.getElementById('adminPassword').value;
   if (adminUsername === 'admin' && adminPassword === 'admin_password') {
-    window.location.href = "file:///C:/Users/atmak/OneDrive/Desktop/UID%20PROJECT/Car_buying_website/HomePage/HomePage.html";
+    window.location.href = "file:///C:/Users/atmak/OneDrive/Desktop/UID PROJECT/Car_buying_website/AdminPage/AdminPage.html";
   } else {
     document.getElementById('adminMessage').innerHTML = 'Invalid username or password for admin.';
   }
