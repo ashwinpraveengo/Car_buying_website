@@ -99,6 +99,12 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    button:hover{
+        color: yellow;
+    }
+    select:hover{
+        color: yellow;
+    }
 }
 .footer-1{
     width: 100vw;
@@ -131,6 +137,9 @@ footer{
 #footer-top-button-2{
     background-color: yellow;
     color: black;
+}
+#footer-top-button-2:hover{
+    color: #fff;
 }
 .two-button-container{
     height: 20vh;
