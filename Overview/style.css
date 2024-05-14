@@ -105,17 +105,26 @@ body {
 
 
 .AppBar nav ul li a:hover {
-    color: red;}
+    color: red;
+}
+
+
 .AppBar nav ul li a:hover::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -3px;
     width: 100%;
-    border-bottom: 2px solid red;}
+    border-bottom: 2px solid red;
+}
+
+
 .AppBar nav ul li.active a {
     color: red; 
-    font-weight: medium; /}
+    font-weight: medium; /
+}
+
+
 .AppBar nav ul li {
     display: flex;
     justify-content: center;
