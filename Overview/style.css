@@ -25,7 +25,9 @@ body {
 
 .AppBar nav ul li a:active,
     .AppBar nav ul li a:hover {
-        color: red;}
+        color: red;
+}
+
 .nav-item {
     display: flex;
     justify-content: center; 
