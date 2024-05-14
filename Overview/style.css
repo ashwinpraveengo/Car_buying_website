@@ -20,7 +20,9 @@ body {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
-    font-style: oblique;}
+    font-style: oblique;
+}
+
 .AppBar nav ul li a:active,
     .AppBar nav ul li a:hover {
         color: red;}
