@@ -19,7 +19,7 @@
             <div class="search">
                 <label for="searchForCar"></label>
                 <input type="text" id="searchForCar" placeholder="Type to Search">
-                <button type="submit" id="searchForCar"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="searchCar()"><i class="fa fa-search"></i></button>
             </div>
             <div class="logo">
                 <img width="105vw" src="https://logos-world.net/wp-content/uploads/2021/06/Porsche-Logo-2014.png" alt="">
@@ -47,6 +47,35 @@
         </div>
     </div>
 
-    <!-- <script src="../SCRIPT.JS"></script> -->
+    <script>
+        function searchCar(){
+            const searchInput = document.getElementById('searchForCar').value.toLowerCase();
+            let url;
+            switch (searchInput){
+                case "911":
+                url = "../Overview/car.html?model=p911";
+                break;
+                case "718":
+                url = "../Overview/car.html?model=p718";
+                break;
+                case "panamera":
+                url = "../Overview/car.html?model=Panamera";
+                break;
+                case "taycan":
+                url = "../Overview/car.html?model=Taycan";
+                break;
+                case "macan":
+                url = "../Overview/car.html?model=Macan";
+                break;
+                case "cayenne":
+                url = "../Overview/car.html?model=Cayenne";
+                break;
+                default:
+                    alert("No Such Car!\nTry the following:\n1. 911\n2 .718\n3. Panamera\n4. Taycan\n5. Macan\n6. Cayenne")
+                    return;
+                }
+                window.open(url,'_blank');
+            }
+    </script>
 </body>
 </html>
