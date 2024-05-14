@@ -54,11 +54,17 @@ body {
 #Heading {
     display: flex;
     margin-top: 40px;
-    padding: 20px;}
+    padding: 20px;
+}
+
+
 #Heading h3 {
     margin: 0;
     font-size: 36px;
-    margin-left: 50px;}
+    margin-left: 50px;
+}
+
+
 #Overview{
     display: flex;
     flex-direction: row;
