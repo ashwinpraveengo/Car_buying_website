@@ -36,6 +36,7 @@ body {
 }
 
 
+
 #Dealer {
     display: inline-block;
     padding: 10px 20px; 
@@ -90,6 +91,7 @@ body {
 }
 
 
+
 .AppBar nav ul li {
     display: inline-block;
     padding: 10px 80px;
@@ -138,23 +140,28 @@ body {
 .AppBar nav ul li:last-child {
     border-right: none;}
 .AppBar nav ul li a:active,
-.AppBar nav ul li a:hover {
+.AppBar nav ul li a:hover:not(.no-border) {
     color: red;}
+
+
 .AppBar nav ul li a:active::after,
-.AppBar nav ul li a:hover::after {
+.AppBar nav ul li a:hover:not(.no-border)::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -3px; 
     width: 100%;
-    border-bottom: 2px solid red;}
+    border-bottom: 2px solid red;
+}
+
+
+
 .Car-Image img{
     width: 60%;
 }
 #carouselExampleIndicators{
-    width: 60%;}
-.carousel-inner img{
-    width: 60%;}
+    width: 100%;}
+
 .button-box {
     margin-bottom: 20px;
     padding: 20px;
@@ -164,29 +171,16 @@ body {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;}
-.light-text {
-    color: #888;}
-.dark-text {
-    color: #333;}
+
+
 .Right-Overview {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;}
-.select-variant {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 200px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;}
-.select-variant .dark-text {
-    margin-right: auto;}
-.select-variant i {
-    font-size: 24px;
-    color: black;}
+    align-items: flex-start;
+}
+
+
+
 .calculate-emi {
     border: none;
     background-color: #007bff;
@@ -198,11 +192,20 @@ body {
     padding: 15px;
     width: 100%;
     border-radius: 8px;
-    cursor: pointer;}
+    cursor: pointer;
+}
+
+
 .calculate-emi span {
-    flex: 1;}
+    flex: 1;
+}
+
+
 .calculate-emi i {
-    color: white;}
+    color: white;
+}
+
+
 .Summary {
     border: none;
     background-color: #007bff;
@@ -214,47 +217,85 @@ body {
     padding: 15px;
     width: 100%;
     border-radius: 8px;
-    cursor: pointer;}
+    cursor: pointer;
+}
+
+
 .Summary span {
-    flex: 1;}
+    flex: 1;
+}
+
 .Summary i {
-    color: white;}
+    color: white;
+}
+
+
 .Variant button-box{
-    display: block;}
+    display: block;
+}
+
+
 .Summary{
-    background-color: #15577e;}
+    background-color: #15577e;
+}
+
+
 .section {
     background-color: #fff;
     padding: 20px;
     width: 80%;
-    margin-top: 6%;}
+    margin-top: 6%;
+}
+
+
 .section-heading {
     font-weight: bold;
     padding-top: 18px;
     margin-bottom: 20px;
     display: inline-block; 
     border-top: 5px #FF0000 solid;
-    position: relative;}
+    position: relative;
+}
+
+
 .section {
-    padding: 50px;}
+    padding: 50px;
+}
+
+
 .section-heading {
     font-size: 28px; 
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+}
+
+
 .table {
     width: 100%; 
     border-collapse: collapse; 
-    margin-top: 20px;}
+    margin-top: 20px;
+}
+
+
 .table tbody tr {
-    border-bottom: 1px solid #ddd;}
+    border-bottom: 1px solid #ddd;
+}
+
+
 .table tbody td {
     padding: 12px; 
-    font-size: 16px;}
+    font-size: 16px;
+}
+
+
 .feature-category {
     background-color: #fff;
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 20px;
-    position: relative;}
+    position: relative;
+}
+
+
 .category-header {
     display: flex;
     justify-content: space-between; 
@@ -263,21 +304,37 @@ body {
     font-size: 24px;
     border-top: 3.5px solid #dddada;
     padding: 28px 9px;
-    cursor: pointer;}
+    cursor: pointer;
+}
+
+
 .down-arrow {
     position: absolute;
     top: 50%;
     right: 15px;
-    transform: translateY(-50%);}
+    transform: translateY(-50%);
+}
+
+
 .category-content {
     display: none;
-    padding-top: 10px;}
+    padding-top: 10px;
+}
+
+
 .category-content table {
     width: 100%;
-    border-collapse: collapse;}
+    border-collapse: collapse;
+}
+
+
+
 .category-content table td {
     padding: 8px;
-    border: none;}
+    border: none;
+}
+
+
 .loan-calculator {
     font-family: "Roboto", sans-serif;
     width: 600px;
@@ -423,8 +480,9 @@ body {
     margin: 0 5px;
     border: none;
     cursor: pointer;
-    border-radius: 50%;
+    border: 1px  solid#000000;
   }
+
   
   .red {
     background-color: red;
@@ -439,7 +497,7 @@ body {
   }
   
   .white {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
   
   .color-button:hover {
@@ -462,8 +520,12 @@ body {
         font-size: 3px;}
 .Car-Image img{
         width: 80%;}
+
+
+        
+        
 #carouselExampleIndicators{
-        width: 60%;}
+        width: 100%;}
 .carousel-inner img{
         width: 80%;}
 .side-bar{
