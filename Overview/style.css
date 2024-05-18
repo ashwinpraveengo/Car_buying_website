@@ -160,7 +160,7 @@ body {
     width: 60%;
 }
 #carouselExampleIndicators{
-    width: 100%;}
+    width: 80%;}
 
 .button-box {
     margin-bottom: 20px;
@@ -333,7 +333,6 @@ body {
     padding: 8px;
     border: none;
 }
-
 
 .loan-calculator {
     font-family: "Roboto", sans-serif;
