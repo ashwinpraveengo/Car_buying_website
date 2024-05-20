@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images3.alphacoders.com/670/thumb-1920-670434.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: rgba(227, 18, 18, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+    color:black;
+}
+h2{
+    color:black;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.tablink {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.tablink:hover {
+    background-color: black;
+}
+.tabcontent {
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin: 10px 0 5px;
+}
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .tabs {
+        flex-direction: column;
+    }
+    .tablink {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+}
