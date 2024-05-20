@@ -6,7 +6,8 @@ function isLogin(username, password) {
     return user.username === username && user.password === password;
   });
   if (user) {
-    window.location.href = "../Homepage/Homepage.html";
+    let url = "../Homepage/Homepage.html"
+    window.open(url)
     return true; 
   } else {
     return false;
@@ -27,7 +28,8 @@ document.getElementById('adminLoginForm').addEventListener('submit', function(ev
   var adminUsername = document.getElementById('adminUsername').value;
   var adminPassword = document.getElementById('adminPassword').value;
   if (adminUsername === 'admin' && adminPassword === 'admin_password') {
-    window.location.href = "../AdminPage/AdminPage.html";
+    let url = "../AdminPage/AdminPage.html"
+    window.open(url)
   } else {
     document.getElementById('adminMessage').innerHTML = 'Invalid username or password for admin.';
   }
