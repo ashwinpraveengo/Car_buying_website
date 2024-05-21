@@ -125,7 +125,7 @@
                                     <p class="fw-bold">Total</p>
                                     <p class="fw-bold"><span id="Total" ></span></p>
                                 </div>
-                                <button class="Summary button-box">
+                                <button class="Summary button-box" onclick="paymentcompleted()">
                                     <span id="finalprice"></span> 
                                 </button>
                             </div>
@@ -137,6 +137,11 @@
     </div>
 
     <script>
+        function paymentcompleted(){
+            url="x.html"
+            window.open(url)
+        }
+
     document.addEventListener('DOMContentLoaded', function(){
         const urlParams = new URLSearchParams(window.location.search);
         const modelID = urlParams.get('model');
