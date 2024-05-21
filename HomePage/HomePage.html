@@ -100,15 +100,14 @@
         <div class="footer-link-boxes">
           <select class="footer-select">
             <option value="" disabled selected>Models</option>
-            <option value="911">911</option>
-            <option value="Boxster">Boxster</option>
-            <option value="Cayenne">Cayenne</option>
-            <option value="Macan">Macan</option>
-            <option value="Panamera">Panamera</option>
-            <option value="Taycan">Taycan</option>
-            <option value="Carrera GT">Carrera GT</option>
-            <option value="718 Cayman">718 Cayman</option>
-            <option value="718 Boxster">718 Boxster</option>
+            <option onclick="openPage('911')" value="911">911</option>
+            <option onclick="openPage('Boxster')" value="Boxster">Boxster</option>
+            <option onclick="openPage('Cayenne')" value="Cayenne">Cayenne</option>
+            <option onclick="openPage('Macan')" value="Macan">Macan</option>
+            <option onclick="openPage('Panamera')" value="Panamera">Panamera</option>
+            <option onclick="openPage('Taycan')" value="Taycan">Taycan</option>
+            <option onclick="openPage('718')" value="718 Cayman">718 Cayman</option>
+            <option onclick="openPage('718')" value="718 Boxster">718 Boxster</option>
           </select>
           
           
@@ -163,5 +162,24 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-f0jHWVgMexm+nONaCz7pt0⅛TV7aSijhnO11vZcZcL2xzIr4Ayqhpnkhv9SpuxzVE" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/ec82d80e24.js" crossorigin="anonymous"></script>
+<script>
+  function openPage(model){
+    switch (model){
+      case '911':
+      url = "../Overview/car.html?model=p911";
+      case 'Cayenne':
+      url = "../Overview/car.html?model=Cayenne";
+      case '718':
+      url = "../Overview/car.html?model=p718";
+      case 'Taycan':
+      url = "../Overview/car.html?model=Taycan";
+      case 'Macan':
+      url = "../Overview/car.html?model=Macan";
+      case 'Panamera':
+      url = "../Overview/car.html?model=Panamera";
+    }
+    window.open(url);
+  }
+</script>
 </body>
 </html>

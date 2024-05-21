@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="summary.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-f0jHWVgMexm+nONaCz7pt0⅛TV7aSijhnO11vZcZcL2xzIr4Ayqhpnkhv9SpuxzVE" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container d-lg-flex">
+        <div class="box-1 bg-light user">
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://logos-world.net/wp-content/uploads/2021/06/Porsche-Logo-2014.png"
+                    class="pic rounded-circle" alt="">
+            </div>
+            <div class="box-inner-1 pb-3 mb-3 ">
+                <div class="d-flex justify-content-between mb-3 userdetails">
+                    <p id="CarName" class="fw-bold">Lightroom Presets</p>
+                    <p id="Price" class="fw-lighter"><i style="padding-right: 10px;" class="fas fa-rupee-sign"></i></p>
+                </div>
+                <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel"
+                    data-bs-interval="2000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/258092/pexels-photo-258092.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                class="d-block w-100 h-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#my" data-bs-slide="prev">
+                        <div class="icon">
+                            <span class="fas fa-arrow-left"></span>
+                        </div>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#my" data-bs-slide="next">
+                        <div class="icon">
+                            <span class="fas fa-arrow-right"></span>
+                        </div>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="radiobtn">
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="box-2">
+            <div class="box-inner-2">
+                <div>
+                    <p class="fw-bold">Payment Details</p>
+                    <p class="dis mb-3">Complete your purchase by providing your payment details</p>
+                </div>
+                <form action="">
+                    <div class="mb-3">
+                        <p class="dis fw-bold mb-2">Email address</p>
+                        <input class="form-control" type="email" value="">
+                    </div>
+                    <div>
+                        <p class="dis fw-bold mb-2">Card details</p>
+                        <div class="d-flex align-items-center justify-content-between card-atm border rounded">
+                            <div class="fab fa-cc-visa ps-3"></div>
+                            <input type="text" class="form-control" placeholder="Card Details">
+                            <div class="d-flex w-50">
+                                <input type="text" class="form-control px-0" placeholder="MM/YY">
+                                <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="my-3 cardname">
+                            <p class="dis fw-bold mb-2">Cardholder name</p>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="address">
+                            <p class="dis fw-bold mb-3">Billing address</p>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected hidden>United States</option>
+                                <option value="1">India</option>
+                                <option value="2">Australia</option>
+                                <option value="3">Canada</option>
+                            </select>
+                            <div class="d-flex">
+                                <input class="form-control zip" type="text" placeholder="ZIP">
+                                <input class="form-control state" type="text" placeholder="State">
+                            </div>
+                            <div class=" my-3">
+                                <p class="dis fw-bold mb-2">GST Number</p>
+                                <div class="inputWithcheck">
+                                    <input class="form-control" type="text" value="GB012345B9">
+                                    <span class="fas fa-check"></span>
+
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column dis">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>Subtotal</p>
+                                    <p><span id="finalprices"></span></p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>Road Safety Tax
+                                        <span></span></p>
+                                    <p><span></span>₹ 20 Lakhs</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p class="fw-bold">Total</p>
+                                    <p class="fw-bold"><span id="Total" ></span></p>
+                                </div>
+                                <button class="Summary button-box">
+                                    <span id="finalprice"></span> 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const urlParams = new URLSearchParams(window.location.search);
+        const modelID = urlParams.get('model');
+        const carID = document.getElementById('CarName');
+
+
+        if (modelID) {
+            const imageSources = {
+        "p911": ["https://cdn.motor1.com/images/mgl/Vzz1qK/s3/most-expensive-2023-porsche-911-gt3-rs.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO8L7KMIHWhQ58HBgfN%25tP0Dy5x1T898maikILanBCrKVzZoufLUSv6DBhY4W8zyP3a2lv1fUOAsU3cgxtMKXwDsGVSbg%25b1HzUWfbPBC7wUhatmwZFHvf", "https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMH8spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmWBisGK7Zlp0KtYYF%25mVSW8uVBrIuGbmukN3er0gexTjzwHlznVaqxKpqNtmO1SZ5CMNYw38D%25ko5xjJGDLFC1aZASIuGbm060iO5MP4hHcn7woMlG7ElPczJNT1BSCbWfDsTFoik7jf"],
+        "p718": ["https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO9I7KM1bkhQ5kpBgfNksH0DydkkT89trdikIMBtBCr61MZouWGiSv6aFLY4WoVVP3a6Rbnw1dn4qTRYL3U8lJHpletT75NijtkRHocQbciPJZ09qLk6pUZKTG2UCVPa9.jpg","https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMH1spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmWBisGK7Zlp0KtYYF%25mVSW8uAVbsqYSJuV0iO5MBuLHcTCkc4CKf2GLl0aSPQrIpSuMNYw3Gyeko5xjrvlLFC1awfrIuGbmNvP3er0guGyjzwHlQnKf2GL0DYSPvs1uLZws4ZoPzdFo%25xOCtRVvFisXbiL","https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMH8spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmWBisGK7Zlp0KtYYF%25mVSW8uAVbsqYSJuV0iO5MBuLHcTCkc4CKf2GLl0aSPQrIpSuMNYw3Gyeko5xjrvlLFC1awfrIuGbmNvP3er0guGyjzwHlQnKf2GL0DYSPvs1uLZws4ZoPzdFo%25xOCtRVvFisXbiL"],        "Panamera": ["https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9Z7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIiBCWhB%25woagZS%25v10lDb4qTHCY3Ui2zmwABc%25FelZcT7RHS0VBV2YTBzmcPEINbdn3rXOtEwZ9sMLemZJ5GtYZpNFLaeKyXGZQQ9%25FedfIjXBdDrxBI9zOqTXI7sUCdrhJ%25DAugpjZj60Kxc4WTQztbaifLOy1BIStYMSULfJFkURXyKV2vdfOdBnpSTIUDCWKASQiFcAomn1I.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9A7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIiBCWhB%25woagZS%25v10lDb4qTHCY3Ui2zmwABc%25FelZcT7RHS0VBV2YTBzmcPEINbdn3rXOtEwZ9sMLemZJ5GtYZpNFLaeKyXGZQQ9%25FedfIjXBdDrxBI9zOqTXI7sUCdrhJ%25DAugpjZj60Kxc4WTQztbaifLOy1BIStYMSULfJFkURXyKV2vdfOdBnpSTIUDCWKASQiFcAomn1I.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIiBCWhB%25woagZS%25v10lDb4qTHCY3Ui2zmwABc%25FelZcT7RHS0VBV2YTBzmcPEINbdn3rXOtEwZ9sMLemZJ5GtYZpNFLaeKyXGZQQ9%25FedfIjXBdDrxBI9zOqTXI7sUCdrhJ%25DAugpjZj60Kxc4WTQztbaifLOy1BIStYMSULfJFkURXyKV2vdfOdBnpSTIUDCWKASQiFcAomn1I.jpg"],
+        "Taycan": ["https://di-uploads-pod15.dealerinspire.com/porscheomaha/uploads/2021/07/2021_Porsche_Taycan.jpeg", "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/Taycan/7041/1579688093390/side-view-(right)-38.jpg", "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/Taycan/7041/1636711367887/exterior-image-171.jpg"],
+        "Macan": ["https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/teaser_720x406x2/dam/pnr/2024/Products/The-new-Macan/Galerie-1/S24_0066_fine.jpg/jcr:content/S24_0066_fine.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9A7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO9I7KMI7khQ5r2agfNu620DyotLT89vlCikIMBKBCr5y2ZouWPMSv6rb7Y4WuT2P3ajmJnw1D%25XEeqoOlLRUv0uGVAM1bFmlffRHocQdfcmNZ09%25mmBjixJLKZhKHMTcAovv1fHPDZ%25tH4OLUu.jpg", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO9I7KMI7khQ5r2agfNu620DyotLT89vlCikIMBKBCr5y2ZouWPMSv6rb7Y4WuT2P3ajmJnw1D%25XEeqoOlLRUv0uGVAM1bFmlffRHocQdfcmNZ09%25mmBjixJLKZhKHMTcAovv1fHPDZ%25tH4OLUu"],
+        "Cayenne": ["https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9Z7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIUHUY4WAYwP3alIFnw1H2IEeqbpzLRUbzCGVAO1uFmlaqIXbHced%25O2n85jscbTSxJd2CezptubsMLkIHJ5GL2tFePzaMXRnd65%25VEqvNjmLDzyxbB319zdhUgAhrBbeSYhCY6VoaQqb3qzTRhjd2gpNVuhmxS1uKvT9d", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9A7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIUHUY4WAYwP3alIFnw1H2IEeqbpzLRUbzCGVAO1uFmlaqIXbHced%25O2n85jscbTSxJd2CezptubsMLkIHJ5GL2tFePzaMXRnd65%25VEqvNjmLDzyxbB319zdhUgAhrBbeSYhCY6VoaQqb3qzTRhjd2gpNVuhmxS1uKvT9d", "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjYu5P3I7tGW3rNbZJNKXv9L7KFrQZtcZdtH4LOLRZUhlO5cwUc7Njm0jIy0TPEapPvlPWhGSTIUHUY4WAYwP3alIFnw1H2IEeqbpzLRUbzCGVAO1uFmlaqIXbHced%25O2n85jscbTSxJd2CezptubsMLkIHJ5GL2tFePzaMXRnd65%25VEqvNjmLDzyxbB319zdhUgAhrBbeSYhCY6VoaQqb3qzTRhjd2gpNVuhmxS1uKvT9d"]
+        };
+
+        const carImages = document.querySelectorAll('.carousel-item img');
+        if (carImages.length > 0 && modelID in imageSources) {
+            for (let i = 0; i < carImages.length && i < imageSources[modelID].length; i++) {
+                carImages[i].src = imageSources[modelID][i];
+            }
+            switch (modelID){
+              case "p911":
+                carID.innerHTML = "Porsche 911";
+                break;
+              case "p718":
+                carID.innerHTML = "Porsche 718 Boxster";
+                break;
+              case "Panamera":
+                carID.innerHTML = "Porsche Panamera";
+                break;
+              case "Taycan":
+                carID.innerHTML = "Porsche Taycan";
+                break;
+              case "Macan":
+                carID.innerHTML = "Porsche Macan";
+                break;
+              case "Cayenne":
+                carID.innerHTML = "Porsche Cayenne";
+                break;
+              
+            }
+        }
+    }}
+    
+    );
+    
+    
+    function getRandomPrice(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(2);
+    }
+    const minprice = 1.44;
+    const maxprice = 1.64;
+
+    const randomPrice = getRandomPrice(minprice, maxprice);
+    document.getElementById('finalprice').innerHTML='₹ '  + randomPrice + ' Crore';
+    document.getElementById('Price').innerHTML += randomPrice + ' Crore';
+    document.getElementById('Total').innerHTML ='₹ '  + randomPrice + ' Crore';
+    const randomPrice1=randomPrice-0.20
+    document.getElementById('finalprices').innerHTML='₹ '  + randomPrice1 + ' Crore';
+    </script>
+</body>
+</html>
