@@ -33,7 +33,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            <img src=""
                                 class="d-block w-100">
                         </div>
                         <div class="carousel-item">
@@ -75,7 +75,7 @@
                 <form action="">
                     <div class="mb-3">
                         <p class="dis fw-bold mb-2">Email address</p>
-                        <input class="form-control" type="email" value="">
+                        <input id="email" class="form-control" type="email" value="">
                     </div>
                     <div>
                         <p class="dis fw-bold mb-2">Card details</p>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="my-3 cardname">
                             <p class="dis fw-bold mb-2">Cardholder name</p>
-                            <input class="form-control" type="text">
+                            <input id="Cardholder-name" class="form-control" type="text">
                         </div>
                         <div class="address">
                             <p class="dis fw-bold mb-3">Billing address</p>
@@ -125,9 +125,9 @@
                                     <p class="fw-bold">Total</p>
                                     <p class="fw-bold"><span id="Total" ></span></p>
                                 </div>
-                                <button class="Summary button-box" onclick="paymentcompleted()">
+                                <button class="Summary button-box" onclick="paymentcompleted(event)">
                                     <span id="finalprice"></span> 
-                                </button>
+                                </button> 
                             </div>
                         </div>
                     </div>
@@ -137,10 +137,33 @@
     </div>
 
     <script>
-        function paymentcompleted(){
-            url="x.html"
-            window.open(url)
-        }
+function paymentcompleted(event) {
+    event.preventDefault(); 
+
+    var email = document.getElementById("email").value;
+    var cname = document.getElementById("Cardholder-name").value;
+
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var namePattern = /^[a-zA-Z\s]*$/;
+
+    if (email === '' || cname === '') {
+        alert("All fields are required!");
+        return;
+    } else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address!");
+        return;
+    } else if (!namePattern.test(cname)) {
+        alert("Cardholder name should contain letters and spaces!");
+        return;
+    } else {
+        var url = "x.html";
+        window.open(url);
+        alert("Form Submitted");
+    }
+}
+
+
+
 
     document.addEventListener('DOMContentLoaded', function(){
         const urlParams = new URLSearchParams(window.location.search);
