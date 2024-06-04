@@ -18,10 +18,10 @@ body {
 }
 h1 {
     margin-bottom: 20px;
-    color:black;
+    color: black;
 }
-h2{
-    color:black;
+h2 {
+    color: black;
 }
 .tabs {
     display: flex;
@@ -30,12 +30,15 @@ h2{
 }
 .tablink {
     background-color: black;
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    flex: 1;
+    margin: 0 2px;
 }
 .tablink:hover {
-    background-color: black;
+    background-color: #333;
 }
 .tabcontent {
     display: none;
